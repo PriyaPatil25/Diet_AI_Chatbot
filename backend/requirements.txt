@@ -1,0 +1,14 @@
+numpy
+langchain
+langchain_groq
+langchain_core
+langchain_community
+pymongo
+fastapi
+uvicorn
+python-multipart
+
+
+# .\venv\Scripts\Activate
+# pip install -r requirements.txt
+# python -m streamlit run app.py
