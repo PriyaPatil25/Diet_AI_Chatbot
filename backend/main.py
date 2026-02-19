@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Cookie, Response, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from backend.models import ChatRequest
-from database import collection, get_history
-from llm import chain
+from backend.database import collection, get_history
+from backend.llm import chain
 from datetime import datetime
 import uuid
 import time
