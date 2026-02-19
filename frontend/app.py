@@ -1,8 +1,13 @@
 import streamlit as st
 import requests
 import uuid
+import os
 
-BACKEND_URL = "https://diet-ai-chatbot-1.onrender.com/chat"
+BACKEND_URL = os.getenv("BACKEND_URL")
+
+if not BACKEND_URL:
+    st.error("Backend URL not configured.")
+    st.stop()
 
 # -------------------------
 # Page Config
