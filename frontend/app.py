@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import uuid
 
-BACKEND_URL = "http://127.0.0.1:8000/chat"
+BACKEND_URL = "https://diet-ai-chatbot-1.onrender.com/chat"
 
 st.set_page_config(page_title="Diet AI", page_icon="🥗")
 
@@ -38,7 +38,8 @@ if user_input:
         json={
             "user_id": st.session_state.user_id,
             "question": user_input
-        }
+        },
+        timeout=30
     )
 
     if response.status_code == 200:
